@@ -29,7 +29,7 @@ class JellyBean < Dessert
   end
 
   def delicious?
-    @flavor == "black licorice"
+    @flavor == "black licorice" ? false : super.delicius? 
   end
 end
 
@@ -77,9 +77,9 @@ describe Dessert do
     dessert.flavor.must_equal( "Other" )
   end
 
-  it 'should return true for JellyBeans if the flavor is  black licorice' do
+  it 'should return false for JellyBeans if the flavor is  black licorice' do
     dessert = JellyBean.new( "Arizona", 200, 'black licorice' )
-    dessert.delicious?().must_equal true   
+    dessert.delicious?().must_equal false   
   end
 
 end

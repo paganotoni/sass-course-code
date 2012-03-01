@@ -25,7 +25,8 @@ class JellyBean < Dessert
   end
 
   def delicious?
-    @flavor == "black licorice"
+    @flavor == "black licorice" ? false : super.delicius? 
   end
 end
+
 
